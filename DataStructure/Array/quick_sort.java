@@ -16,7 +16,7 @@ public class quick_sort {
         }
     }
 
-    public static void swap(int [] arr, int i, int j){
+    public static void swap(int [] arr, int i, int cdj){
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
