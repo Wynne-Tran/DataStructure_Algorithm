@@ -1,6 +1,8 @@
 package DataStructure.Array;
 
 import java.util.*;
+
+//Divide and conquer algorithm
 public class quick_sort {
     public static void main(String []args){
         int [] arr = {4, 9, 2, 4, 7, 6, 3, 3, 0, 5};
@@ -16,7 +18,7 @@ public class quick_sort {
         }
     }
 
-    public static void swap(int [] arr, int i, int cdj){
+    public static void swap(int [] arr, int i, int j){
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;

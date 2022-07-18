@@ -1,7 +1,7 @@
 package leetcode.blind75.Arrays;
 import java.util.*;
 
-public class ContainsDuplicate {
+public class ContainsDuplicate_E {
     public static void main(String []args){
         int [] arr = {4, 9, 2, 4, 7, 6, 3, 3, 0, 5};
        System.out.println(containsDuplicate(arr));
