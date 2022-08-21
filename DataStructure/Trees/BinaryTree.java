@@ -1,5 +1,11 @@
 package DataStructure.Trees;
 
+/*
+ * Delete C1: the item to be delete has no children
+ * Delete C2: the item to be delete has 1 child(either left or right)
+ * Delete C3: the time to be delete has both a left and right child.
+ */
+
 public class BinaryTree {
     public static class BNode {
         int data;
@@ -89,14 +95,15 @@ public class BinaryTree {
             tree.right = deleteHelper(tree.right, data);
         }
         if(tree.data == data) {
-            if(tree.left == null) return tree.right;
-            if(tree.right == null) return tree.left;
+            if(tree.left == null) return tree.right; // case 1 & 2
+            if(tree.right == null) return tree.left; // case 1 & 2
+            //Case 3
             BNode successor = tree.right;
             while (tree.left != null) {
                 successor = successor.left;
             }
-            tree.data = successor.data;
-            tree.right = deleteHelper(tree.right, successor.data);
+            tree.data = successor.data; // replace root node
+            tree.right = deleteHelper(tree.right, successor.data); // delete duplicate
         }
         return tree;
     }
