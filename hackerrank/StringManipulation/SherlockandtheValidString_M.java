@@ -1,5 +1,12 @@
 package hackerrank.StringManipulation;
 
+/*
+aabbcs => NO
+
+aaccd => YES
+ * Given , we would need to remove two characters, both c and d  aabb or a and b  abcd, to make it valid. 
+ * We are limited to removing only one character, so  is invalid.
+ */
 import java.util.*;
 public class SherlockandtheValidString_M {
     public static void main(String[] args) {
